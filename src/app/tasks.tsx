@@ -100,18 +100,21 @@ export default function TasksScreen() {
             <TextInput
               style={styles.input}
               placeholder="Task title *"
+              placeholderTextColor="#000"
               value={form.title}
               onChangeText={t => setForm(f => ({ ...f, title: t }))}
             />
             <TextInput
               style={styles.input}
               placeholder="Subject (optional)"
+              placeholderTextColor="#000"
               value={form.subject}
               onChangeText={t => setForm(f => ({ ...f, subject: t }))}
             />
             <TextInput
               style={styles.input}
               placeholder="Due date: YYYY-MM-DD (optional)"
+              placeholderTextColor="#000"
               value={form.dueDate}
               onChangeText={t => setForm(f => ({ ...f, dueDate: t }))}
             />

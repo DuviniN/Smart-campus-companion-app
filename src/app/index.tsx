@@ -137,18 +137,21 @@ export default function DashboardScreen() {
             <TextInput
               style={styles.input}
               placeholder="Subject name"
+              placeholderTextColor="#000"
               value={form.name}
               onChangeText={t => setForm(f => ({ ...f, name: t }))}
             />
             <TextInput
               style={styles.input}
               placeholder="Time (e.g. 09:00 AM)"
+              placeholderTextColor="#000"
               value={form.time}
               onChangeText={t => setForm(f => ({ ...f, time: t }))}
             />
             <TextInput
               style={styles.input}
               placeholder="Room (optional)"
+              placeholderTextColor="#000"
               value={form.room}
               onChangeText={t => setForm(f => ({ ...f, room: t }))}
             />

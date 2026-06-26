@@ -93,6 +93,7 @@ export default function ProfileScreen() {
               value={profile.name}
               onChangeText={t => setProfile(p => ({ ...p, name: t }))}
               placeholder="Enter your name"
+              placeholderTextColor="#000"
             />
 
             <Text style={styles.label}>Student ID</Text>
@@ -101,6 +102,7 @@ export default function ProfileScreen() {
               value={profile.studentId}
               onChangeText={t => setProfile(p => ({ ...p, studentId: t }))}
               placeholder="e.g. SC2024001"
+              placeholderTextColor="#000"
             />
 
             <Text style={styles.label}>Year of Study</Text>
@@ -128,6 +130,7 @@ export default function ProfileScreen() {
               value={profile.gpa}
               onChangeText={t => setProfile(p => ({ ...p, gpa: t }))}
               placeholder="e.g. 3.50"
+              placeholderTextColor="#000"
               keyboardType="decimal-pad"
             />
 
@@ -137,6 +140,7 @@ export default function ProfileScreen() {
               value={profile.creditsEarned}
               onChangeText={t => setProfile(p => ({ ...p, creditsEarned: t }))}
               placeholder="e.g. 60"
+              placeholderTextColor="#000"
               keyboardType="numeric"
             />
 
@@ -146,6 +150,7 @@ export default function ProfileScreen() {
               value={profile.creditsTotal}
               onChangeText={t => setProfile(p => ({ ...p, creditsTotal: t }))}
               placeholder="e.g. 120"
+              placeholderTextColor="#000"
               keyboardType="numeric"
             />
           </View>

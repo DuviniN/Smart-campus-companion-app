@@ -1,56 +1,116 @@
-# Welcome to your Expo app 👋
+# Smart Campus
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A cross-platform mobile app (Android, iOS, and web) built with **Expo** and **React Native**, using **Expo Router** for file-based navigation.
 
-## Get started
+## Framework & Key Libraries
 
-1. Install dependencies
+| Layer | Technology |
+|---|---|
+| Framework | [Expo](https://expo.dev) ~56.0 |
+| UI | React Native 0.85 + React 19 |
+| Routing | Expo Router (file-based, `src/app/`) |
+| Animations | React Native Reanimated 4 + Worklets |
+| Camera | expo-camera |
+| Notifications | expo-notifications |
+| Storage | @react-native-async-storage/async-storage |
+| Language | TypeScript ~6.0 |
 
-   ```bash
-   npm install
-   ```
+## System Dependencies
 
-2. Start the app
+### All platforms
 
-   ```bash
-   npx expo start
-   ```
+- **Node.js** 18 or later — [nodejs.org](https://nodejs.org)
+- **npm** 9+ (bundled with Node)
 
-In the output, you'll find options to open the app in a
+### Android
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- **Android Studio** with the Android SDK installed
+- An Android emulator (AVD) **or** a physical Android device with USB debugging enabled
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+### iOS (macOS only)
 
-## Get a fresh project
+- **Xcode** 15 or later (from the Mac App Store)
+- **iOS Simulator** (included with Xcode) or a physical iPhone/iPad
 
-When you're ready, run:
+### Physical device (any platform)
+
+- **Expo Go** app installed on the device — available on the [App Store](https://apps.apple.com/app/expo-go/id982107779) and [Google Play](https://play.google.com/store/apps/details?id=host.exp.exponent)
+
+## Getting Started
+
+### 1. Install dependencies
 
 ```bash
-npm run reset-project
+npm install
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### 2. Start the development server
 
-### Other setup steps
+```bash
+npx expo start
+```
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+The terminal will display a QR code and a menu of options.
 
-## Learn more
+### Run on a physical device
 
-To learn more about developing your project with Expo, look at the following resources:
+Scan the QR code with:
+- **Android** — the Expo Go app
+- **iOS** — the built-in Camera app (which opens Expo Go)
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+### Run on an emulator / simulator
 
-## Join the community
+Press the key shown in the terminal:
 
-Join our community of developers creating universal apps.
+| Key | Target |
+|---|---|
+| `a` | Android emulator |
+| `i` | iOS simulator (macOS only) |
+| `w` | Web browser |
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Or use the npm scripts directly:
+
+```bash
+npm run android   # Android emulator
+npm run ios       # iOS simulator
+npm run web       # Web browser
+```
+
+## Project Structure
+
+```
+smart-campus/
+├── src/
+│   ├── app/          # Screens (file-based routing via Expo Router)
+│   │   ├── _layout.tsx
+│   │   ├── index.tsx
+│   │   ├── explore.tsx
+│   │   ├── tasks.tsx
+│   │   └── profile.tsx
+│   ├── components/   # Shared UI components
+│   ├── constants/    # Theme and global constants
+│   └── hooks/        # Custom React hooks
+├── assets/           # Images, fonts, icons
+├── package.json
+└── tsconfig.json
+```
+
+## Building for Production
+
+Production builds use **EAS Build** (Expo Application Services).
+
+```bash
+# Install EAS CLI
+npm install -g eas-cli
+
+# Log in to your Expo account
+eas login
+
+# Build for Android (APK / AAB)
+eas build --platform android
+
+# Build for iOS (IPA)
+eas build --platform ios
+```
+
+See the [EAS Build documentation](https://docs.expo.dev/build/introduction/) for signing and submission details.
