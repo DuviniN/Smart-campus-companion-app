@@ -9,7 +9,6 @@ A cross-platform mobile app (Android, iOS, and web) built with **Expo** and **Re
 | Framework | [Expo](https://expo.dev) ~56.0 |
 | UI | React Native 0.85 + React 19 |
 | Routing | Expo Router (file-based, `src/app/`) |
-| Animations | React Native Reanimated 4 + Worklets |
 | Camera | expo-camera |
 | Notifications | expo-notifications |
 | Storage | @react-native-async-storage/async-storage |
